@@ -1,5 +1,5 @@
 #! /usr/bin/gforth
-		
+		\ Source: https://github.com/chmykh/apl-life
 		\ I love FORTH and hope to present reasons with this code.
 
 		\ The original idea was to implement Conway's Game of Life as a one-liner in APL executed in FORTH.
@@ -54,9 +54,9 @@ cr ." Machine word size: " cell .
 		\ in tiny steps and test every line just next to it. Sometimes we will first try things in interpreter 
 		\ mode and then wrap a code in a word definition.
 
-: shape   @ ;
-: data   cell+ @ ;
-: first   data @ ;
+: shape	@ ;
+: data	cell+ @ ;
+: first	data @ ;
 
 		\ We have no function for array creation right now, but as the whole thing is a matter of convention, 
 		\ we can create the first array manually. Anywhere in a memory, suppose at address PTR, we will put a 
